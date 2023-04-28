@@ -45,3 +45,41 @@ main {
   width: 90%;
   margin: 0 auto;
 }
+
+
+@media (min-width: 700px) {
+  body {
+    display: flex;
+  }
+
+  main {
+    padding-top: 120px;
+    padding: 150px 50px 40px;
+  }
+
+}
+
+@media (max-width: 470px) {
+  h2, button, output  {
+    font-size: 2.2rem;
+  }
+
+  p, textarea {
+    font-size: 2.1rem;
+  }
+
+  footer p, .tweet-username {
+    font-size: 1.5rem
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+
+  nav div {
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+  }
+
+}
