@@ -4,34 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Test / driver code (temporary). Eventually will get this from the server.
-const data = [
-  {
-    "user": {
-      "name": "Test-Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Test-Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd"
-    },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
-
 $(document).ready(function () {
 
   // Handler and submit event for when the user submits the new tweet form (clicking on the tweet button submits the form)
@@ -58,15 +30,14 @@ $(document).ready(function () {
   // event listener for submit event on the form
   $('#tweet-form').on('submit', handler);
 
-  // const $button = $('.new-tweet-submit-button');
-  // $button.on('click', function () {
-
-  //   $.ajax('more-posts.html', { method: 'GET' })
-  //     .then(function (morePostsHtml) {
-  //       // console.log('Success: ', morePostsHtml);
-  //       $button.replaceWith(morePostsHtml);
-  //     }); // then
-  // }); // button on click
+      // Send request to the /tweets server to fetch all the tweets that are stored, then render them to the page
+      const loadTweets = function() {
+        $.ajax('/tweets', { method: 'GET' })
+          .then(function(moreTweets) {
+            renderTweets(moreTweets);
+          });
+      };
+      loadTweets();
 
 
 
