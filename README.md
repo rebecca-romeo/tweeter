@@ -4,8 +4,8 @@ Tweeter, a front-end focused application that also utilizes express, allows user
 
 ## Final Product
 
-!["screenshot of URLS page"]()
-!["screenshot of creating a tinyURL"]()
+!["screenshot of desktop version"](https://github.com/rebecca-romeo/tweeter/blob/master/public/images/desktop.png)
+!["screenshot of mobile version"](https://github.com/rebecca-romeo/tweeter/blob/master/public/images/mobile.png)
 
 ## Dependencies
 
