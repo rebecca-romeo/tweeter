@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"); /*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  color: #545149;
+  background-color: #f4f1ec;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 2.4rem;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+h1,
+p,
+nav {
+  margin: 0;
+  padding: 0;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  color: #FFF;
+  padding: 0 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+}
+nav .nav-logo-tweeter {
+  font-family: "Bungee", sans-serif;
+  font-size: 3.5rem;
+}
+nav .nav-down-arrow {
+  color: red;
+  padding-top: 5px;
+}
+nav .nav-down-arrow:hover {
+  transform: scale(1.1);
+}
+
+header {
+  background-image: url("../images/profile-background.png");
+}
+header .header-flex-container {
+  height: 520px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .header-flex-container .header-avatar {
+  padding-top: 120px;
+}
+header .header-flex-container .header-username h2 {
+  font-weight: 300;
+  color: #FFF;
+  text-shadow: 0.5px 0.5px 0.5px rgb(85, 82, 74);
+}
+
+.new-tweet textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #545149;
+  font-weight: 600;
+  resize: none;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.new-tweet-flex-container {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Bungee", sans-serif;
+  padding: 15px 0;
+}
+.new-tweet-flex-container .new-tweet-submit-button {
+  background-color: #4056A1;
+  color: #FFF;
+  border: none;
+  padding: 5px 10px;
+}
+.new-tweet-flex-container button:hover {
+  transform: scale(1.1);
+}
+
+.invalid {
+  color: red;
+}
+
+.new-tweet-error-message {
+  display: none;
+  color: red;
+  border: 5px solid red;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+article {
+  border: 3px solid #545149;
+  padding: 20px;
+  margin: 50px 0 20px;
+}
+article:hover {
+  box-shadow: 10px 10px 0px 0px rgba(124, 173, 247, 0.75);
+}
+article .tweets-user-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+article .tweets-user-container .tweet-user {
+  display: flex;
+  align-items: center;
+}
+article .tweets-user-container .tweet-user h2 {
+  padding-left: 10px;
+}
+article .tweets-user-container .tweet-username {
+  color: rgba(124, 173, 247, 0.75);
+}
+article .tweets-user-container .tweet-content {
+  padding: 35px 20px;
+  border-bottom: 3px solid #545149;
+}
+article footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px 0px;
+  font-size: 1.6rem;
+}
+article footer i {
+  color: #4056A1;
+}
+article footer i:hover {
+  color: rgba(124, 173, 247, 0.75);
+}
+
+@media (min-width: 700px) {
+  body {
+    display: flex;
+  }
+  main {
+    padding-top: 120px;
+    padding: 150px 50px 40px;
+  }
+}
+@media (max-width: 470px) {
+  h2, button, output {
+    font-size: 2.2rem;
+  }
+  p, textarea {
+    font-size: 2.1rem;
+  }
+  footer p, .tweet-username {
+    font-size: 1.5rem;
+  }
+  nav {
+    flex-direction: column;
+  }
+  nav div {
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
