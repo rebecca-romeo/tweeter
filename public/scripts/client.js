@@ -70,7 +70,7 @@ $(document).ready(function () {
       </p>
 
       <footer>
-      <p>${tweetObject.created_at}</p>
+      <p>${timeago.format(tweetObject.created_at)}</p>
 
       <div>
         <i class="fa-solid fa-flag"></i>
