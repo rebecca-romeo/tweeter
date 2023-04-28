@@ -8,7 +8,7 @@
 const data = [
   {
     "user": {
-      "name": "Newton",
+      "name": "Test-Newton",
       "avatars": "https://i.imgur.com/73hZDYK.png"
       ,
       "handle": "@SirIsaac"
@@ -20,9 +20,10 @@ const data = [
   },
   {
     "user": {
-      "name": "Descartes",
+      "name": "Test-Descartes",
       "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
+      "handle": "@rd"
+    },
     "content": {
       "text": "Je pense , donc je suis"
     },
@@ -32,6 +33,18 @@ const data = [
 
 
 $(document).ready(function () {
+
+  const renderTweets = function (tweets) {
+    // loops through tweets
+    // calls createTweetElement for each tweet
+    // takes return value and appends it to the tweets container
+
+    for (tweet of tweets) {
+      const $newTweet = createTweetElement(tweet);
+      $('.tweets-container').prepend($newTweet);
+    }
+
+  }
 
   const createTweetElement = function (tweetObject) {
     const $oneTweet = $(`
@@ -65,9 +78,6 @@ $(document).ready(function () {
     return $oneTweet
   }
 
-  const $tweet = createTweetElement(tweetData);
 
-  // Test / driver code (temporary)
-  console.log($tweet); // to see what it looks like
-  $('#tweets-container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  renderTweets(data);
 }); // END document ready
