@@ -10,7 +10,7 @@ Tweeter, a front-end focused application that also utilizes express, allows user
 ### Tablet version
 !["screenshot of tablet version"](https://github.com/rebecca-romeo/tweeter/blob/master/public/images/tablet.png)
 
-### Tablet version
+### Mobile version
 !["screenshot of mobile version"](https://github.com/rebecca-romeo/tweeter/blob/master/public/images/mobile.png)
 
 ## Dependencies
