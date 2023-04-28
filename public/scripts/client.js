@@ -10,18 +10,17 @@ $(document).ready(function () {
   const handler = function (event) {
     event.preventDefault();
 
-    // Get the tweet content from the form input
+    // Get tweet content from form input
     const tweetContent = $('#tweet-text').val();
 
     // Check if tweet content is too long
     if(tweetContent.length > 140) {
-      return alert('Error: Your tweet is too long. Please limit your tweet to 140 characters or less.');
+      return $('.new-tweet-error-message').text("Your tweet is too long! In order to make a post, please stay within 140 characters.").show();
     }
 
     // Check if tweet content is empty
-    if (!tweetContent) {
-      alert('Error: Please enter some text to tweet.');
-      return
+    if (!tweetContent.trim()) {
+      return $('.new-tweet-error-message').text("No tweet content to post! Please type a message first.").show();
     }
 
 
