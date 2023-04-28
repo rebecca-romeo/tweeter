@@ -34,6 +34,42 @@ const data = [
 
 $(document).ready(function () {
 
+  // Handler and submit event for when the user submits the new tweet form (clicking on the tweet button submits the form)
+  const handler = function (event) {
+    event.preventDefault();
+
+    console.log("check")
+
+    const formData = $(this).serialize();
+
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: formData
+    })
+      .then(function (data) {
+        $('.tweets-container').prepend(createTweetElement(data));
+      })
+
+    location.reload(true);
+
+  }
+
+  // event listener for submit event on the form
+  $('#tweet-form').on('submit', handler);
+
+  // const $button = $('.new-tweet-submit-button');
+  // $button.on('click', function () {
+
+  //   $.ajax('more-posts.html', { method: 'GET' })
+  //     .then(function (morePostsHtml) {
+  //       // console.log('Success: ', morePostsHtml);
+  //       $button.replaceWith(morePostsHtml);
+  //     }); // then
+  // }); // button on click
+
+
+
   const renderTweets = function (tweets) {
     // loops through tweets
     // calls createTweetElement for each tweet
