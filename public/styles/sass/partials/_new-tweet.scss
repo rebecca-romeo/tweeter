@@ -1,0 +1,41 @@
+@use './variables' as v;
+
+.new-tweet textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #545149;
+  font-weight: 600;
+  resize: none;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.new-tweet-flex-container {
+  display: flex;
+  justify-content: space-between;
+  font-family: v.$bungee;
+  padding: 15px 0;
+  .new-tweet-submit-button {
+    background-color: v.$dark-blue;
+    color: v.$white;
+    border: none;
+    padding: 5px 10px;
+  }
+  button:hover {
+    transform: scale(1.1);
+  }
+}
+
+
+.invalid {
+  color: v.$red;
+}
+
+.new-tweet-error-message {
+  display: none;
+  color: v.$red;
+  border: 5px solid v.$red;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}

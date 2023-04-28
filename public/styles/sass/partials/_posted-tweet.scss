@@ -1,0 +1,49 @@
+@use "./variables" as v;
+
+article {
+  border: 3px solid #545149;
+  padding: 20px;
+  margin: 50px 0 20px;
+  &:hover {
+    box-shadow: 10px 10px 0px 0px v.$light-blue;
+  }
+
+
+  .tweets-user-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+
+    .tweet-user {
+      display: flex;
+      align-items: center;
+
+      h2 {
+        padding-left: 10px;
+      }
+    }
+
+    .tweet-username {
+      color: v.$light-blue;
+    }
+
+    .tweet-content {
+      padding: 35px 20px;
+      border-bottom: 3px solid #545149;
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 5px 0px;
+    font-size: 1.6rem;
+    i {
+      color: v.$dark-blue;
+      &:hover {
+        color: v.$light-blue;
+      }
+    }
+  }
+}

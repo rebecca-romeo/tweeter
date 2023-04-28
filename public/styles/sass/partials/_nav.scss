@@ -1,0 +1,28 @@
+@use "./variables" as v;
+
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: v.$dark-blue;
+  color: #FFF;
+  padding: 0 1.5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  .nav-logo-tweeter {
+    font-family: v.$bungee;
+    font-size: 3.5rem;
+  }
+  .nav-down-arrow {
+    color: v.$red;
+    padding-top: 5px;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+
+
