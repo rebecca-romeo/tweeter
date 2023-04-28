@@ -10,6 +10,21 @@ $(document).ready(function () {
   const handler = function (event) {
     event.preventDefault();
 
+    // Get the tweet content from the form input
+    const tweetContent = $('#tweet-text').val();
+
+    // Check if tweet content is too long
+    if(tweetContent.length > 140) {
+      return alert('Error: Your tweet is too long. Please limit your tweet to 140 characters or less.');
+    }
+
+    // Check if tweet content is empty
+    if (!tweetContent) {
+      alert('Error: Please enter some text to tweet.');
+      return
+    }
+
+
     console.log("check")
 
     const formData = $(this).serialize();
@@ -65,7 +80,7 @@ $(document).ready(function () {
       <p class="tweet-username">${tweetObject.user.handle}</p>
       </div>
 
-      <p class="tweet-content ">
+      <p class="tweet-content">
       ${tweetObject.content.text}
       </p>
 
