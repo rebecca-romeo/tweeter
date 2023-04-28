@@ -17,4 +17,4 @@ Tweeter, a front-end focused application that also utilizes express, allows user
 ## Getting Started
 
 - Install all dependencies (using the `npm install` command).
-- Start the project (using the `npm run` command).
+- Start the project (using the `npm start` command).
