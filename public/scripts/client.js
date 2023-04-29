@@ -1,9 +1,3 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(document).ready(function () {
 
   // Handler and submit event for when the user submits the new tweet form (clicking on the tweet button submits the form)
@@ -23,9 +17,6 @@ $(document).ready(function () {
       return $('.new-tweet-error-message').text("No tweet content to post! Please type a message first.").show();
     }
 
-
-    console.log("check");
-
     const formData = $(this).serialize();
 
     $.ajax({
@@ -34,11 +25,10 @@ $(document).ready(function () {
       data: formData
     })
       .then(function (data) {
-        $('.tweets-container').prepend(createTweetElement(data));
+        loadTweets();
+        $('#tweet-text').val("");
+        $(".counter").text(140);
       });
-
-    location.reload(true);
-
   };
 
   // event listener for submit event on the form
@@ -51,9 +41,8 @@ $(document).ready(function () {
         renderTweets(moreTweets);
       });
   };
+
   loadTweets();
-
-
 
   const renderTweets = function (tweets) {
     // loops through tweets
@@ -64,7 +53,6 @@ $(document).ready(function () {
       const $newTweet = createTweetElement(tweet);
       $('.tweets-container').prepend($newTweet);
     }
-
   };
 
   const createTweetElement = function (tweetObject) {
