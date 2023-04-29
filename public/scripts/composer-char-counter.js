@@ -1,9 +1,9 @@
 $(document).ready(function() {
   $('#tweet-text').on('input', function() {
-    let input = $('#tweet-text');
-    let characters = input.val().length;
-    let charactersLeft = 140 - characters;
-    let counter =  $('.counter');
+    const input = $('#tweet-text');
+    const characters = input.val().length;
+    const charactersLeft = 140 - characters;
+    const counter =  $('.counter');
 
     counter.html(charactersLeft);
 
