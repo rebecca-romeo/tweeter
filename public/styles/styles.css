@@ -95,6 +95,7 @@ header .header-flex-container .header-username h2 {
   resize: none;
   width: 100%;
   padding: 10px 0;
+  word-wrap: break-word;
 }
 
 .new-tweet-flex-container {
