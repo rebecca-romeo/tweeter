@@ -174,7 +174,8 @@ article footer i:hover {
   color: rgba(124, 173, 247, 0.75);
 }
 
-@media (min-width: 700px) {
+/* Desktop */
+@media (min-width: 1024px) {
   body {
     display: flex;
   }
@@ -183,6 +184,7 @@ article footer i:hover {
     padding: 150px 50px 40px;
   }
 }
+/* Mobile */
 @media (max-width: 470px) {
   h2, button, output {
     font-size: 2.2rem;
@@ -200,4 +202,4 @@ article footer i:hover {
     font-size: 1.2rem;
     padding-bottom: 2rem;
   }
-}/*# sourceMappingURL=styles.css.map */
+}
