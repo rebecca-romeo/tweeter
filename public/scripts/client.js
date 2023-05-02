@@ -17,21 +17,22 @@ $(document).ready(function () {
       return $('.new-tweet-error-message').text("No tweet content to post! Please type a message first.").show();
     }
 
-    const formData = $(this).serialize();
-
     $.ajax({
       url: '/tweets',
       method: 'POST',
-      data: formData
+      data: $(this).serialize()
     })
       .then(function (data) {
         loadTweets();
         $('#tweet-text').val("");
         $(".counter").text(140);
+      })
+      .catch(function (error) {
+        console.log("Error: ", error);
       });
-  };
+  }; // END handler
 
-  // event listener for submit event on the form
+  // event listener for form submit
   $('#tweet-form').on('submit', handler);
 
   // Send request to the /tweets server to fetch all the tweets that are stored, then render them to the page
@@ -40,20 +41,22 @@ $(document).ready(function () {
       .then(function (moreTweets) {
         renderTweets(moreTweets);
       });
-  };
+  }; // END loadTweets
 
   loadTweets();
 
   const renderTweets = function (tweets) {
+    // Empty previous content before creating a new tweet
+    $('.tweets-container').empty();
+
     // loops through tweets
     // calls createTweetElement for each tweet
     // takes return value and appends it to the tweets container
-
     for (tweet of tweets) {
       const $newTweet = createTweetElement(tweet);
       $('.tweets-container').prepend($newTweet);
     }
-  };
+  }; // END renderTweets
 
   const createTweetElement = function (tweetObject) {
     const $oneTweet = $(`
@@ -84,7 +87,7 @@ $(document).ready(function () {
     );
 
     return $oneTweet;
-  };
+  }; // END createTweetElement
 
 
   renderTweets(data);
