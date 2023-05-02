@@ -93,6 +93,4 @@ $(document).ready(function () {
     return $oneTweet;
   }; // END createTweetElement
 
-
-  renderTweets(data);
 }); // END document ready
