@@ -1,14 +1,22 @@
-// Desktop
+/* Desktop */
 @media (min-width: 1024px) {
   body {
     display: flex;
   }
-
   main {
     padding-top: 120px;
-    padding: 150px 50px 40px;
+    padding: 150px 50px 40px 20px;
+  }
+  header {
+    height: 400px;
+    width: 600px;
+    margin: 0rem 5rem;
+    margin-top: 190px;
   }
 
+  .header-flex-container {
+    margin-top: -100px
+  }
 }
 
 // Mobile
