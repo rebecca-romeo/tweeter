@@ -26,6 +26,7 @@ $(document).ready(function () {
         loadTweets();
         $('#tweet-text').val("");
         $(".counter").text(140);
+        $('.new-tweet-error-message').hide();
       })
       .catch(function (error) {
         console.log("Error: ", error);
