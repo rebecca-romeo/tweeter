@@ -40,6 +40,9 @@ $(document).ready(function () {
     $.ajax('/tweets', { method: 'GET' })
       .then(function (moreTweets) {
         renderTweets(moreTweets);
+      })
+      .catch(function (error) {
+        console.log("Error: ", error);
       });
   }; // END loadTweets
 
