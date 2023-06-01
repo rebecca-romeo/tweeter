@@ -2,7 +2,11 @@
 
 Tweeter, a front-end focused application that also utilizes express, allows users to write a messages under 140 characters and post it to the page.
 
-## Final Product
+## Users:
+- Can create new tweets and post them to the page
+- Users must stay within 140 characters. A tweet that is too long will show a red character count, and display an error message if they try to post it
+- Users can backspace letters at any time, and watch the character count change to reflect the currrent number of characters
+- Users must write a message in order to post. Empty tweets will display an error message if they try to post it
 
 ## Create a new Tweet
 Write a new tweet. Watch the character count decrease as you type so that you know to stay within the limit of 140 characters. Post your new tweet and see it dynamically add to the page.
