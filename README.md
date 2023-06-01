@@ -11,18 +11,22 @@ Tweeter, a front-end focused application that also utilizes express, allows user
 
 ## Create a new Tweet
 Write a new tweet. Watch the character count decrease as you type so that you know to stay within the limit of 140 characters. Post your new tweet and see it dynamically add to the page.
+
 !["screenshot of creating new tweet"](https://github.com/rebecca-romeo/tweeter/blob/master/public/images/new_tweet.gif)
 
 ## Error: tweet is too long!
 When you write a tweet that is too long, the character count turns red to let you know you've passed the character limit. If you try to post a tweet that's too long, you'll get an error message.
+
 !["screenshot of a long tweet"](https://github.com/rebecca-romeo/tweeter/blob/master/public/images/long_tweet.gif)
 
 ## Error: you didn't write a message!
 If you try to post a tweet without writing anything, you will get an error message letting you know that each tweet needs some content in order to be posted.
+
 !["screenshot of an empty tweet"](https://github.com/rebecca-romeo/tweeter/blob/master/public/images/empty_tweet.gif)
 
 ## Responsive design - desktop, tablet, mobile
 Responsive design allows you to seemlessly switch between screen sizes and view on different devices
+
 !["screenshot of an empty tweet"](https://github.com/rebecca-romeo/tweeter/blob/master/public/images/responsive_design.gif)
 
 ## Dependencies
